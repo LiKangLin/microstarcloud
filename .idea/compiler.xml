@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="microstar-consumer-dept-80" />
         <module name="microstar-provider-dept-8001" />
         <module name="microstarcloud-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="microstar-consumer-dept-80" target="1.8" />
       <module name="microstar-provider-dept-8001" target="1.8" />
       <module name="microstarcloud" target="1.8" />
       <module name="microstarcloud-api" target="1.8" />

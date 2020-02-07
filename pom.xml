@@ -9,6 +9,7 @@
     <modules>
         <module>microstarcloud-api</module>
         <module>microstar-provider-dept-8001</module>
+        <module>microstar-consumer-dept-80</module>
     </modules>
     <packaging>pom</packaging>
 
