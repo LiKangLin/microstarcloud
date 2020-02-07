@@ -222,3 +222,11 @@ https://docs.spring.io/spring-framework/docs/4.3.7.RELEASE/javadoc-api/org/sprin
 使用restTemplate访问restful接口非常的简单粗暴无脑。
 (url, requestMap, ResponseBean.class)这三个参数分别代表
 REST请求地址、请求参数、HTTP响应转换被转换成的对象类型。
+
+
+【2020-2-7工作汇报】李康林
+1、交易风险实时决策系统培训心得：
+(1)当前公司使用的实时风控系统的现状以及不足，了解外界实时风控系统的现状
+(2)明确核心的功能需求，从而确定具体的技术实施方案
+(3)了解方案中涉及到的指标变量实时加工、规则制定以及实时决策等设计逻辑
+2、搭建Rest微服务工程，实现消费者通过RestTemplate远程访问HTTP服务的功能

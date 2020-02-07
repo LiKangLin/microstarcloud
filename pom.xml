@@ -10,6 +10,9 @@
         <module>microstarcloud-api</module>
         <module>microstar-provider-dept-8001</module>
         <module>microstar-consumer-dept-80</module>
+        <module>microstarcloud-eureka-7001</module>
+        <module>microstarcloud-eureka-7002</module>
+        <module>microstarcloud-eureka-7003</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -72,6 +75,25 @@
         </dependencies>
     </dependencyManagement>
 
-
+    <build>
+        <finalName>microstarcloud</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
