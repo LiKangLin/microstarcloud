@@ -13,6 +13,8 @@
         <module>microstarcloud-eureka-7001</module>
         <module>microstarcloud-eureka-7002</module>
         <module>microstarcloud-eureka-7003</module>
+        <module>microstar-provider-dept-8002</module>
+        <module>microstar-provider-dept-8003</module>
     </modules>
     <packaging>pom</packaging>
 

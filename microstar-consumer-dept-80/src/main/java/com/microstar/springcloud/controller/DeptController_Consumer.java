@@ -14,9 +14,12 @@ import java.util.List;
  */
 @RestController
 public class DeptController_Consumer {
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
 
 
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+
+    //请求的微服务的名称，对应微服务在eureka上的名称，取消直接对IP的访问
+    private static final String REST_URL_PREFIX = "http://MICROSTARCLOUD-DEPT";
     /*使用restTemplate访问restful接口非常的简单粗暴无脑。
       (url, requestMap, ResponseBean.class)这三个参数分别代表
     REST请求地址、请求参数、HTTP响应转换被转换成的对象类型。
