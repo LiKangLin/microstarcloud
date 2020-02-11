@@ -15,6 +15,7 @@
         <module>microstarcloud-eureka-7003</module>
         <module>microstar-provider-dept-8002</module>
         <module>microstar-provider-dept-8003</module>
+        <module>microstar-consumer-dept-feign</module>
     </modules>
     <packaging>pom</packaging>
 

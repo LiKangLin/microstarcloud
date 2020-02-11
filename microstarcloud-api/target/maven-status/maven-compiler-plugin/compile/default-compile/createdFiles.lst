@@ -1,1 +1,2 @@
 com\microstar\springcloud\entities\Dept.class
+com\microstar\springcloud\service\DeptClientService.class

@@ -223,6 +223,87 @@ https://docs.spring.io/spring-framework/docs/4.3.7.RELEASE/javadoc-api/org/sprin
 (url, requestMap, ResponseBean.class)这三个参数分别代表
 REST请求地址、请求参数、HTTP响应转换被转换成的对象类型。
 
+20200210
+新增ribbon组件，针对客户端的LB软负载均衡组件
+负载均衡的算法，轮询、随机、访问加权的算法
+通过IRule接口，或者可自定义负载均衡算法
+@Bean
+public IRule myRule(){
+   return new RandomRule();可以调整为随机算法
+}
+
+202020211
+Feign组件的学习
+创建一个接口和一个注解
+Feign是一个声明式WebService客户端，使用Feign能让编写Web Service客户
+端更加简单，它的使用方式是定义一个接口，然后在上面添加注解，同时也支持
+JAX-RS标准的注解。Feign也支持可拔插式的编码器和解码器，Spring Cloud对
+Feign进行了封装，使其支持了Spring MVC标准注解和HttpMessageConverts。
+Feign可以与Eureka和Ribbon组合使用以支持负载均衡。
+
+feign面向接口编程，而ribbon是面向微服务名称的负载均衡
+1、微服务名称获得调用地址
+2、就是通过接口+注解，获得我们的调用服务
+
+Feign能干什么
+Feign旨在使编写Java Http客户端变得更容易
+前面在使用Ribbbon+RestTemplate时，利用RestTemplate
+对http请求的封装处理，形成了一套模板化的调用方法。但是在实际开发中，由于对服务
+依赖的调用可能不止一处，往往一个接口会被多次调用，所以通常都会针对每个微服务自行封
+装一些客户端类来包装这些依赖服务的调用。所以，Feign在此基础上做了进一步的封装，由它来
+帮助我们定义和实现依赖服务接口的定义。在Feign的实现下，我们只需创建一个接口并使用注
+解的方式来配置它(以前是Dao接口上面标注Mapper注解，现在是一个微服务接口上面标注一个
+Feign注解即可)，即可完成对服务提供方的接口绑定，简化了使用Spring cloud Ribbon时，自动
+封装服务调用客户端的开发量。
+
+操作步骤
+1、在api公共类中添加service，加上@FeignClient接口
+@FeignClient(value = "MICROSTARCLOUD-DEPT")
+  public interface DeptClientService
+  {
+      @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
+      public Dept get(@PathVariable("id") long id);
+
+      @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
+      public List<Dept> list();
+
+      @RequestMapping(value = "/dept/add", method = RequestMethod.POST)
+      public boolean add(Dept dept);
+  }
+
+2、在Feign的消费工程中使用service进行调用
+public class DeptController_Feign
+{
+    @Autowired
+    private DeptClientService service;
+
+    @RequestMapping(value = "/consumer/dept/get/{id}")
+    public Dept get(@PathVariable("id") Long id)
+    {
+        return this.service.get(id);
+    }
+
+    @RequestMapping(value = "/consumer/dept/list")
+    public List<Dept> list()
+    {
+        return this.service.list();
+    }
+
+    @RequestMapping(value = "/consumer/dept/add")
+    public Object add(Dept dept)
+    {
+        return this.service.add(dept);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 【2020-2-7工作汇报】李康林
 1、交易风险实时决策系统培训心得：
@@ -230,3 +311,8 @@ REST请求地址、请求参数、HTTP响应转换被转换成的对象类型。
 (2)明确核心的功能需求，从而确定具体的技术实施方案
 (3)了解方案中涉及到的指标变量实时加工、规则制定以及实时决策等设计逻辑
 2、搭建Rest微服务工程，实现消费者通过RestTemplate远程访问HTTP服务的功能
+
+【2020-2-11工作汇报】李康林
+1、学习信用卡利息培训
+2、读架构真经第十二章
+3、接入Feign组件，实现负载均衡
