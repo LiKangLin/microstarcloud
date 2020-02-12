@@ -27,6 +27,7 @@
         <module name="microstar-provider-dept-8001" />
         <module name="microstar-provider-dept-8002" />
         <module name="microstar-provider-dept-8003" />
+        <module name="microstar-provider-dept-hystrix-8001" />
         <module name="microstarcloud-api" />
         <module name="microstarcloud-eureka-7001" />
         <module name="microstarcloud-eureka-7002" />
@@ -39,6 +40,7 @@
       <module name="microstar-provider-dept-8001" target="1.8" />
       <module name="microstar-provider-dept-8002" target="1.8" />
       <module name="microstar-provider-dept-8003" target="1.8" />
+      <module name="microstar-provider-dept-hystrix-8001" target="1.8" />
       <module name="microstarcloud" target="1.8" />
       <module name="microstarcloud-api" target="1.8" />
       <module name="microstarcloud-eureka-7001" target="1.8" />
