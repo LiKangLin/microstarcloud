@@ -1,5 +1,6 @@
 package com.microstar.springcloud.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -9,8 +10,8 @@ import java.io.Serializable;
 /**
  * Created by PVer on 2020/2/6.
  */
-@NoArgsConstructor
-//@AllArgsConstructor
+//@NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Accessors(chain=true)
 public class Dept implements Serializable// entity --orm--- db_table

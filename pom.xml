@@ -17,6 +17,7 @@
         <module>microstar-provider-dept-8003</module>
         <module>microstar-consumer-dept-feign</module>
         <module>microstar-provider-dept-hystrix-8001</module>
+        <module>microstar-zuul-gateway-9527</module>
     </modules>
     <packaging>pom</packaging>
 
