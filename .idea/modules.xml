@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/microstar-zuul-gateway-9527/microstar-zuul-gateway-9527.iml" filepath="$PROJECT_DIR$/microstar-zuul-gateway-9527/microstar-zuul-gateway-9527.iml" />
       <module fileurl="file://$PROJECT_DIR$/microstarcloud.iml" filepath="$PROJECT_DIR$/microstarcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/microstarcloud-api/microstarcloud-api.iml" filepath="$PROJECT_DIR$/microstarcloud-api/microstarcloud-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microstarcloud-config-3344/microstarcloud-config-3344.iml" filepath="$PROJECT_DIR$/microstarcloud-config-3344/microstarcloud-config-3344.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microstarcloud-config-client-3355/microstarcloud-config-client-3355.iml" filepath="$PROJECT_DIR$/microstarcloud-config-client-3355/microstarcloud-config-client-3355.iml" />
       <module fileurl="file://$PROJECT_DIR$/microstarcloud-eureka-7001/microstarcloud-eureka-7001.iml" filepath="$PROJECT_DIR$/microstarcloud-eureka-7001/microstarcloud-eureka-7001.iml" />
       <module fileurl="file://$PROJECT_DIR$/microstarcloud-eureka-7002/microstarcloud-eureka-7002.iml" filepath="$PROJECT_DIR$/microstarcloud-eureka-7002/microstarcloud-eureka-7002.iml" />
       <module fileurl="file://$PROJECT_DIR$/microstarcloud-eureka-7003/microstarcloud-eureka-7003.iml" filepath="$PROJECT_DIR$/microstarcloud-eureka-7003/microstarcloud-eureka-7003.iml" />
